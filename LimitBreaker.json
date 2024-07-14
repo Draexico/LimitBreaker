@@ -11,6 +11,10 @@
   "IsTestingExclusive": "False",
   "DalamudApiLevel": 10,
   "DownloadCount": 0,
+  "Tags": [
+    "Limit Break",
+    "plugin"
+  ],
   "LastUpdate": 0,
   "RepoUrl": "https://github.com/Draexico/LimitBreaker",
   "DownloadLinkInstall": "https://github.com/Draexico/LimitBreaker/releases/download/LimitBreaker/LimitBreaker.zip",
