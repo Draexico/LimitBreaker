@@ -1,0 +1,11 @@
+{
+  "Author": "Draexico",
+  "Name": "LimitBreaker",
+  "Punchline": "Make limit breaking fun.",
+  "Description": "/lb - Active Limit Breaker",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "Limit Break",
+    "plugin"
+  ]
+}
