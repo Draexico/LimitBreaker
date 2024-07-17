@@ -1,0 +1,20 @@
+{
+  "Author": "Draexico",
+  "Name": "LimitBreaker",
+  "InternalName": "LimitBreaker",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "/lb - Active Limit Breaker",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/Draexico/LimitBreaker",
+  "Tags": [
+    "Limit Break",
+    "plugin"
+  ],
+  "DalamudApiLevel": 10,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "Punchline": "Make limit breaking fun.",
+  "AcceptsFeedback": true
+}
