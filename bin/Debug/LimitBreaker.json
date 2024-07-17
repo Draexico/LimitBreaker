@@ -3,6 +3,7 @@
   "Name": "LimitBreaker",
   "InternalName": "LimitBreaker",
   "AssemblyVersion": "1.2.0.0",
+  "TestingAssemblyVersion": "1.3.0.0",
   "Description": "/lb - Active Limit Breaker",
   "ApplicableVersion": "any",
   "RepoUrl": "https://github.com/Draexico/LimitBreaker",
