@@ -16,9 +16,9 @@
         "Limit Break",
         "plugin"
     ],
-    "LastUpdate": 1,
+    "LastUpdate": 0,
     "RepoUrl": "https://github.com/Draexico/LimitBreaker",
-    "DownloadLinkInstall": "https://github.com/Draexico/LimitBreaker/releases/download/1.2.0.0/LimitBreaker.zip",
-    "DownloadLinkUpdate": "https://github.com/Draexico/LimitBreaker/releases/download/1.2.0.0/LimitBreaker.zip"
+    "DownloadLinkInstall": "https://github.com/Draexico/LimitBreaker/releases/download/1.3.0.0/LimitBreaker.zip",
+    "DownloadLinkUpdate": "https://github.com/Draexico/LimitBreaker/releases/download/1.3.0.0/LimitBreaker.zip"
     }
 ]
