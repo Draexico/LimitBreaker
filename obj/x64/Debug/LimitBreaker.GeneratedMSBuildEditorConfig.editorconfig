@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LimitBreaker
-build_property.ProjectDir = C:\Users\kosta\AppData\Roaming\XIVLauncher\installedPlugins\LimitBreaker_Testing\1.0.0.0\
+build_property.ProjectDir = C:\Users\kosta\AppData\Roaming\XIVLauncher\installedPlugins\LimitBreaker_Testing\1.2.0.0\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
