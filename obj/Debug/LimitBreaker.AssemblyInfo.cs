@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LimitBreaker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe2444465266a5516537f008ac990d175637618b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7a3fbff29604778edd11901778ca57975665984")]
 [assembly: System.Reflection.AssemblyProductAttribute("LimitBreaker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LimitBreaker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
