@@ -1,20 +1,22 @@
 {
   "Author": "Draexico",
   "Name": "LimitBreaker",
-  "InternalName": "LimitBreaker",
-  "AssemblyVersion": "1.0.0.0",
+  "Punchline": "Make limit breaking fun.",
   "Description": "/lb - Active Limit Breaker",
   "ApplicableVersion": "any",
-  "RepoUrl": "https://github.com/Draexico/LimitBreaker",
+  "IsHide": "False",
+  "InternalName": "LimitBreaker",
+  "AssemblyVersion": "1.1.0.0",
+  "TestingAssemblyVersion": "1.2.0.0",
+  "IsTestingExclusive": "False",
+  "DalamudApiLevel": 10,
+  "DownloadCount": 0,
   "Tags": [
     "Limit Break",
     "plugin"
   ],
-  "DalamudApiLevel": 10,
-  "LoadRequiredState": 0,
-  "LoadSync": false,
-  "CanUnloadAsync": false,
-  "LoadPriority": 0,
-  "Punchline": "Make limit breaking fun.",
-  "AcceptsFeedback": true
+  "LastUpdate": 0,
+  "RepoUrl": "https://github.com/Draexico/LimitBreaker",
+  "DownloadLinkInstall": "https://github.com/Draexico/LimitBreaker/releases/download/1.1.0.0/LimitBreaker.zip",
+  "DownloadLinkUpdate": "https://github.com/Draexico/LimitBreaker/releases/download/1.1.0.0/LimitBreaker.zip"
 }
