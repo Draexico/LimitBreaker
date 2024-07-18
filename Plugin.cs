@@ -101,7 +101,7 @@ namespace LimitBreaker
             Framework.Update -= OnUpdate;
         }
         private void OnDutyWiped(object? sender, ushort dutyId) {
-            ChatGui.Print("Duty wiped");
+            ChatGui.Print("Duty wipedd");
             newCurrentUnits = 0; // Resets units on duty wipe
         }
         private void OnUpdate(IFramework framework)
