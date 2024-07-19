@@ -30,7 +30,7 @@ namespace LimitBreaker
         private const string CommandName = "/lb";
         private bool isMonitoring;
         private ushort newCurrentUnits; 
-        private string version = "1.2.0.0";
+        private string version = "1.3.0.1";
 
         private readonly List<string> soundFiles = new List<string>
         {
@@ -102,9 +102,8 @@ namespace LimitBreaker
             Framework.Update -= OnUpdate;
         }
         private void OnDutyWiped(object? sender, ushort dutyId) {
-            ChatGui.Print("Duty wiped");
+            // ChatGui.Print("Duty wiped");
             newCurrentUnits = 0; // Resets units on duty wipe
-            PlayRandomSoundAsync();
         }
         private void OnUpdate(IFramework framework)
         {
@@ -135,7 +134,7 @@ namespace LimitBreaker
             {
                 var random = new Random();
                 var selectedSound = soundFiles[random.Next(soundFiles.Count)];
-                var filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), $@"XIVLauncher\installedPlugins\LimitBreaker_Testing\{version}\{selectedSound}");
+                var filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), $@"XIVLauncher\installedPlugins\LimitBreaker\{version}\{selectedSound}");
                 if (!File.Exists(filePath))
                 {
                     ChatGui.PrintError($"Error: The file located at {filePath} does not exist.");

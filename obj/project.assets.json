@@ -139,11 +139,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kosta\\AppData\\Roaming\\XIVLauncher\\installedPlugins\\LimitBreaker_Testing\\1.2.0.0\\LimitBreaker.csproj",
+      "projectUniqueName": "C:\\Users\\kosta\\OneDrive\\Documents\\DalamudPlugins\\LimitBreaker\\LimitBreaker.csproj",
       "projectName": "LimitBreaker",
-      "projectPath": "C:\\Users\\kosta\\AppData\\Roaming\\XIVLauncher\\installedPlugins\\LimitBreaker_Testing\\1.2.0.0\\LimitBreaker.csproj",
+      "projectPath": "C:\\Users\\kosta\\OneDrive\\Documents\\DalamudPlugins\\LimitBreaker\\LimitBreaker.csproj",
       "packagesPath": "C:\\Users\\kosta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kosta\\AppData\\Roaming\\XIVLauncher\\installedPlugins\\LimitBreaker_Testing\\1.2.0.0\\obj\\",
+      "outputPath": "C:\\Users\\kosta\\OneDrive\\Documents\\DalamudPlugins\\LimitBreaker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
