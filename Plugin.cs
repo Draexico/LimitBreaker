@@ -9,6 +9,8 @@ using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
 using Dalamud.Game.ClientState.Objects.Types;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
+using FFXIVClientStructs.FFXIV.Client.Game.Character;
+using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using Lumina.Excel.GeneratedSheets;
 using Dalamud.Game.ClientState.Party;
 using Microsoft.VisualBasic;
@@ -30,6 +32,7 @@ namespace LimitBreaker
         private const string CommandName = "/lb";
         private bool isMonitoring;
         private ushort newCurrentUnits; 
+        private bool isInDuty;
         private string version = "1.3.0.1";
 
         private readonly List<string> soundFiles = new List<string>
@@ -42,6 +45,7 @@ namespace LimitBreaker
         {
             isMonitoring = false;
             newCurrentUnits = 0;
+            isInDuty = false;
             CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
                 HelpMessage = "Starts LimitBreaker"
@@ -69,10 +73,22 @@ namespace LimitBreaker
                 ChatGui.Print("LimitBreaker Deactivated");
             }
         }
-
+        private void DutyStarted() {
+            DutyState.DutyWiped += OnDutyWiped;
+            var partyList = PartyList.Length;
+            if (partyList > 0) {
+                Framework.Update -= OnUpdate;
+                Framework.Update += OnUpdate;
+            } 
+            newCurrentUnits = 0; // Resets units on new duty
+        }
         // Start monitoring if a duty has been started
         private void StartMonitoring()
         {
+            isInDuty = DutyState.IsDutyStarted;
+            if (isInDuty) {
+                DutyStarted();
+            }
             DutyState.DutyStarted += OnDutyStarted;
             DutyState.DutyCompleted += OnDutyCompleted;
         }
@@ -89,13 +105,7 @@ namespace LimitBreaker
         private void OnDutyStarted(object? sender, ushort dutyId)
         {
             ChatGui.Print("Duty Started");
-            DutyState.DutyWiped += OnDutyWiped;
-            var partyList = PartyList.Length;
-            if (partyList > 0) {
-                Framework.Update -= OnUpdate;
-                Framework.Update += OnUpdate;
-            } 
-            newCurrentUnits = 0; // Resets units on new duty
+            DutyStarted();
         }
         private void OnDutyCompleted(object? sender, ushort dutyId) {
             ChatGui.Print("Duty Complete. Stopping monitoring.");
@@ -112,10 +122,9 @@ namespace LimitBreaker
                 LimitBreakController* lbController = LimitBreakController.Instance();
                 if (lbController != null)
                 {
-                    var barCount = lbController->BarCount;
-                    var currentUnits = lbController->CurrentUnits;
-                    var barUnits = lbController->BarUnits;
-
+                    var barCount = lbController->BarCount; // Total LB bars
+                    var currentUnits = lbController->CurrentUnits; // How many bars have been filled
+                    ChatGui.Print($"Bar Count: {barCount} | Current Units: {currentUnits}");
                     if (currentUnits < newCurrentUnits) {
                         PlayRandomSoundAsync();
                     }
